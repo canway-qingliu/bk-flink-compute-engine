@@ -41,6 +41,7 @@ flink run \
 ## 文档
 
 - [文档目录](docs/README.md)
+- [参数说明](docs/overview/parameters.md)
 - [数据流](docs/overview/architecture.md)
 - [预计算字段](docs/Precalculate-index-fields.md)与[索引命名](docs/index-naming.md)
 - [贡献指南](CONTRIBUTING.md)

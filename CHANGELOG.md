@@ -4,6 +4,7 @@
 
 ### Added
 
+- 增加应用参数说明，列出默认值、单位、约束、配置优先级与运行示例。
 - 增加 `integration-tests` profile，使用 Kafka、Elasticsearch 和 Flink MiniCluster 验证 TaskManager 故障恢复。
 
 ### Changed
@@ -12,7 +13,7 @@
 - 精简项目说明、部署文档和开发指南，修正 JSON 配置及 REST 恢复参数说明。
 - 部署文件移至 `k8s-deploy/`，索引模板移至 `docs/elasticsearch/`，同步文档、Compose 和测试引用。
 - Java 包名改为 `com.tencent.bk.bkmonitor.rum.*`。
-- Session/View 默认空闲关闭时间为 15 分钟，最大生命周期为 240 分钟；关闭后的状态保留期分别为 1500 和 63 分钟。
+- Session/View 默认空闲关闭时间为 15 分钟，最大生命周期为 240 分钟；关闭后的状态保留期统一为 120 分钟（2 小时）。
 - 关闭原因增加 `idle_timeout` 和 `max_life`，迟到修正保留首次关闭信息。
 - Session/View 按业务、应用和实体 ID 隔离状态；每个窗口生成 `window_id` 并参与 ES 文档 ID。旧状态及索引处理见 [恢复与升级](docs/overview/architecture.md#恢复与升级)。
 

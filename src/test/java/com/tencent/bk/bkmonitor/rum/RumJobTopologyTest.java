@@ -111,8 +111,8 @@ class RumJobTopologyTest {
     assertThat(config.sessionWindow().maxLifeMinutes()).isEqualTo(120L);
     assertThat(config.viewWindow().gapMinutes()).isEqualTo(5L);
     assertThat(config.viewWindow().maxLifeMinutes()).isEqualTo(2L);
-    assertThat(config.sessionWindow().stateTtlMinutes()).isEqualTo(1_500L);
-    assertThat(config.viewWindow().stateTtlMinutes()).isEqualTo(63L);
+    assertThat(config.sessionWindow().stateTtlMinutes()).isEqualTo(120L);
+    assertThat(config.viewWindow().stateTtlMinutes()).isEqualTo(120L);
   }
 
   @Test

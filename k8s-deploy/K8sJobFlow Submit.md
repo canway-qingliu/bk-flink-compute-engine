@@ -19,6 +19,10 @@ docker push registry.example.com/your-team/rum-compute:1.0
 
 [k8s-deploy/docker/Dockerfile](docker/Dockerfile) 将 JAR 放在 `/opt/app/app.jar`。镜像基于 Alpine，不包含 Java 或 Flink 运行时。
 
+同目录的 `task.json` 是脱敏后的样例配置，被 `.gitignore` 忽略，**不进镜像**；真实配置由平台通过 Secret 挂载到执行入口类进程可读取的位置，路径见下表"应用参数"。
+
+修改 Java 后必须重新执行 `mvn package` → `cp` → `docker build` → `docker push` 四步，JAR 在 git 忽略之列，旧文件会被新构建覆盖。
+
 ## 平台需要的参数
 
 | 项目 | 值或要求 |

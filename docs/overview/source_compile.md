@@ -73,6 +73,8 @@ flink run \
 
 ## 常用参数
 
+全部应用参数的默认值、单位、约束和生效边界见 [参数说明](parameters.md)。
+
 ### 作业与 Kafka
 
 | 参数 | 默认值 | 含义 |
@@ -97,7 +99,7 @@ flink run \
 | `emit.interval.seconds` | `30` | `30` | 活动窗口有变化时的输出间隔 |
 | `gap.minutes` | `15` | `15` | 连续无新事件的关闭时长 |
 | `max.life.minutes` | `240` | `240` | 自窗口创建起的最大时长 |
-| `state.ttl.minutes` | `1500` | `63` | 首次关闭后的状态保留期；清理后再保留同等时长的标记 |
+| `state.ttl.minutes` | `120` | `120` | 首次关闭后的状态保留期；清理后再保留同等时长的标记 |
 
 `session.max.string.chars` 默认 `512`，限制部分 Session 展示字段的长度；应用名和实体 ID 保留原值。窗口行为见 [窗口与状态](architecture.md#窗口与状态)。
 

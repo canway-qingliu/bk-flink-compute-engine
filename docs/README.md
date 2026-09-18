@@ -5,6 +5,7 @@
 | 文档 | 内容 |
 | --- | --- |
 | [构建与运行](overview/source_compile.md) | 环境、配置和启动命令 |
+| [参数说明](overview/parameters.md) | 全部应用参数、默认值、单位、约束及配置示例 |
 | [部署](overview/operation.md) | Flink 集群与作业提交 |
 | [升级说明](overview/architecture.md#恢复与升级) | 旧状态与索引处理 |
 | [集成测试](overview/integration-tests.md) | 故障恢复测试的运行方式与范围 |

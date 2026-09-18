@@ -27,8 +27,8 @@ public final class RumJobConfig {
   private static final long DEFAULT_PARTITION_DISCOVERY_INTERVAL_MS = 300_000L;
   private static final long DEFAULT_WINDOW_GAP_MINUTES = 15L;
   private static final long DEFAULT_WINDOW_MAX_LIFE_MINUTES = 240L;
-  private static final long DEFAULT_SESSION_RETENTION_MINUTES = 1_500L;
-  private static final long DEFAULT_VIEW_RETENTION_MINUTES = 63L;
+  private static final long DEFAULT_SESSION_RETENTION_MINUTES = 120L;
+  private static final long DEFAULT_VIEW_RETENTION_MINUTES = 120L;
 
   /** Kafka Source 初始 offset 策略；用 enum 防止拓扑层继续比较原始字符串。 */
   public enum StartupMode {

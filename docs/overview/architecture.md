@@ -48,7 +48,7 @@ Kafka 消息由 `RumEventDeserializationSchema` 解析为 `RumEvent`，再由 `R
 | 状态已清理、清理标记仍在 | 事件时间不超过 watermark 时拒绝聚合，否则创建新窗口 |
 | 清理标记已过期 | 可以创建新窗口 |
 
-首次关闭后，Session 状态默认保留 1500 分钟，View 保留 63 分钟；清理后再保留同等时长的标记。参数见 [构建与运行](source_compile.md)。Watermark 用于清理后的迟到判定，不决定活动窗口的关闭时间。
+首次关闭后，Session 和 View 状态默认均保留 120 分钟（2 小时）；清理后再保留同等时长的标记。参数见 [构建与运行](source_compile.md)。Watermark 用于清理后的迟到判定，不决定活动窗口的关闭时间。
 
 `close_reason` 记录首次关闭原因：SDK 结束事件为 `normal`，空闲超时为 `idle_timeout`，达到最大生命周期为 `max_life`。
 
