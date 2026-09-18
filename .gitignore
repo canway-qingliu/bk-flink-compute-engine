@@ -1,0 +1,17 @@
+target/
+.idea/
+.vscode/
+*.iml
+.DS_Store
+logs/
+.zcode
+submit.ini
+.AGENTS.md
+AGENTS.md
+# 构建产物与运行时配置(含密钥)
+k8s-deploy/docker/*.jar
+k8s-deploy/docker/task.json
+
+# Python 运行缓存
+__pycache__/
+*.py[cod]

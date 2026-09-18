@@ -1,0 +1,17 @@
+# rum-compute - 代码扫描路径配置
+# 蓝鲸代码扫描工具 (code-scan) 通过本文件排除无需扫描的路径。
+# 与 bk-job 保持一致的字段名 (test_source / auto_generate_source / third_party_source)。
+
+test_source:
+  - /scripts/__pycache__/
+
+auto_generate_source:
+  - /target/
+  - /.idea/
+  - /.zcode/
+  - /.codemoss/
+  - /graphify-out/
+  - /*.iml
+  - /*.class
+
+third_party_source: []

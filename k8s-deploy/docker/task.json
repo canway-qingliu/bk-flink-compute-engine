@@ -1,0 +1,14 @@
+{
+  "kafka.bootstrap.servers": "bk-kafka.blueking.svc.cluster.local:9092",
+  "kafka.topic": "0bkmonitor_15765900",
+  "sink.type": "es",
+  "sink.es.hosts": "https://10.0.7.8:9200",
+  "sink.es.username": "elastic",
+  "sink.es.password": "xxx",
+  "sink.es.index-prefix": "rum-session-wide",
+  "late.sink.type": "none",
+  "session.gap.minutes": "15",
+  "session.max.life.minutes": "240",
+  "view.gap.minutes": "15",
+  "view.max.life.minutes": "240"
+}
